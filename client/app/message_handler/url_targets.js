@@ -144,6 +144,11 @@ module.exports = {
     'programId={program_id}'
   ].join('&'),
 
+  'automation_program/ac/edit': [
+    'bootstrap.php?session_id={session_id}',
+    'r=eventCenter/index#/edit/ac/{id}'
+  ].join('&'),
+
   'program/report': [
     'bootstrap.php?session_id={session_id}',
     'r=program/report',
@@ -251,6 +256,14 @@ module.exports = {
     'service=push-notification',
     'iframe=show',
     '#/reports/inapp/{id}'
+  ].join('&'),
+
+  'me_push/inapp-campaigns/edit': [
+    'bootstrap.php?session_id={session_id}',
+    'r=service/index',
+    'service=push-notification',
+    'iframe=show',
+    '#/inapp-campaigns/{id}'
   ].join('&'),
 
   'me_inbox/edit': [

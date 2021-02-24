@@ -267,6 +267,20 @@ describe('Navigate Handler', function() {
     ].join('&'));
   });
 
+  it('navigates to AC program edit page in automation editor', function() {
+    navigateTo({
+      target: 'automation_program/ac/edit',
+      params: {
+        id: 123456
+      }
+    });
+
+    expect(fakeWindow.location.href).to.eql(
+      'bootstrap.php?session_id=SESSIONID' +
+      '&r=eventCenter/index#/edit/ac/123456'
+    );
+  });
+
   it('navigates to program report page with proper params', function() {
     messageHandler.handleMessage({
       event: 'navigate',
@@ -573,6 +587,23 @@ describe('Navigate Handler', function() {
       'service=push-notification',
       'iframe=show',
       '#/inapp-campaigns'
+    ].join('&'));
+  });
+
+  it('navigates to Mobile Engage inapp campaigns edit page', function() {
+    navigateTo({
+      target: 'me_push/inapp-campaigns/edit',
+      params: {
+        id: 'foo'
+      }
+    });
+
+    expect(fakeWindow.location.href).to.eql([
+      'bootstrap.php?session_id=SESSIONID',
+      'r=service/index',
+      'service=push-notification',
+      'iframe=show',
+      '#/inapp-campaigns/foo'
     ].join('&'));
   });
 
