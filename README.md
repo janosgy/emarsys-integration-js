@@ -243,6 +243,7 @@ __Targets available__
 |email_campaigns/list|Will head to the campaign list.||
 |email_campaigns/create|Will open the editor with a new campaign.|use_template, mailstream|
 |email_campaigns/edit|Will open the editor with the campaign set.|campaign_id|
+|email_campaigns/preview|Will open the preview of the campaign set.|campaign_id|
 |email_campaigns/copy|Will open the editor with a new copied campaign.|campaign_id|
 |email_campaigns/blocks/create|Will open the content blocks template selector.|mailstream|
 |email_analysis/list|Will head to reporting.||
@@ -260,7 +261,7 @@ __Targets available__
 |trendsreporting/trends|Trend reporting page||
 |trendsreporting/trends/campaign|Trend reporting page for specific campaign|campaign_id|
 |me_push/edit|Mobile Engage push campaign editor|id|
-|me_push/report|Mobile Engage push campaign report|id|
+|me_push/report|Mobile Engage push campaign report (push internal campaign id)|id|
 |me_push/campaigns|Mobile Engage push campaigns list
 |me_push/inapp-campaigns|Mobile Engage inapp campaigns list
 |me_push/inapp-campaigns/report|Mobile Engage inapp campaign report|id|
